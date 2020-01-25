@@ -13,8 +13,7 @@ public class HandleJson {
         }catch (JSONException err){
             Log.d("dataHandle", "handleTheJson: we messed up");
         }
-
-
-
     }
+
+
 }

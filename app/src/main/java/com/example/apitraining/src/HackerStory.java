@@ -25,4 +25,40 @@ public class HackerStory {
         this.type = type;
         this.url = url;
     }
+
+    public String getBy() {
+        return by;
+    }
+
+    public int getDescendants() {
+        return descendants;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public int[] getKids() {
+        return kids;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public int getTime() {
+        return time;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public String getUrl() {
+        return url;
+    }
 }
