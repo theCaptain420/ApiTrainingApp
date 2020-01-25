@@ -12,6 +12,9 @@ public class SingletonOfStories {
     public void addStory (HackerStory hackerStory){
         arrayOfStories.add(hackerStory);
     }
+    public ArrayList<HackerStory> getStories(){
+        return arrayOfStories;
+    }
 
     public static SingletonOfStories getInstance(){
         if (single_instance==null){
