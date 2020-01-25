@@ -11,6 +11,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.apitraining.src.HandleRequest;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,26 +24,11 @@ public class MainActivity extends AppCompatActivity {
 
         mainText = findViewById(R.id.mainText);
 
-        //set up request queue
-        RequestQueue queue = Volley.newRequestQueue(this);
         String url = "http://thormasters.com/TMAppData.json";
+        HandleRequest handleRequest = new HandleRequest();
 
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        //displayText
-                        mainText.setText("Response is: " + response);
-                    }
-                }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                mainText.setText("Didnt work");
-            }
-        }
-        );
+        handleRequest.handleStringRequest(mainText, url, this);
 
-        queue.add(stringRequest);
 
     }
 }
