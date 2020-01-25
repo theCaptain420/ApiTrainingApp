@@ -24,11 +24,11 @@ public class MainActivity extends AppCompatActivity {
 
         mainText = findViewById(R.id.mainText);
 
-        String url = "http://thormasters.com/TMAppData.json";
+        String url = "https://hacker-news.firebaseio.com/v0/item/8863.json";
         HandleRequest handleRequest = new HandleRequest();
 
-        handleRequest.handleStringRequest(mainText, url, this);
-
+        //handleRequest.handleStringRequest(mainText, url, this);
+        handleRequest.handleJsonRequest(mainText,url,this);
 
     }
 }
